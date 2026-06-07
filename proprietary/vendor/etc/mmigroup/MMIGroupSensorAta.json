@@ -1,0 +1,34 @@
+{
+  "itemConfig": [
+    {
+      "showName": "Optical_c"
+    },
+    {
+      "showName": "Optical",
+      "paramconfig": {
+        "lux_std": 297,
+        "lux_pet": 99,
+        "value_change_in": 0
+      }
+    },
+    {
+      "showName": "RGBSensor"
+    },
+    {
+      "showName": "Proximity_C",
+      "support": false
+    },
+    {
+      "showName": "Proximity",
+      "action": "com.mmigroup.action.PROXIMITY",
+      "support": false,
+      "paramconfig": {
+        "distance_tolerance": 0.5
+      }
+    },
+    {
+      "showName": "Proximity_st",
+      "support": false
+    }
+  ]
+}

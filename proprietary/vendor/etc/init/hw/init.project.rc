@@ -1,0 +1,890 @@
+import /vendor/etc/init/hw/init.mtkgki.rc
+import /vendor/etc/init/hw/init.pstore.rc
+
+# MTK project .rc configure
+
+on init
+    mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
+    mkdir /storage/usbotg 0700 root root
+
+# BEGIN TINNO, 20230215，guoxiong2, add for keyboard  feature
+on early-init
+    chown system system /vendor/etc/tn_keyboard.ko
+    chmod 0660 /vendor/etc/tn_keyboard.ko
+    insmod /vendor/etc/tn_keyboard.ko
+    chown system system /dev/ttyS3
+    chmod 0666 /dev/ttyS3
+# END TINNO, 20230215，guoxiong2, add for keyboard  feature
+
+on post-fs-data
+
+#Camera
+    chmod 0660 /dev/MAINAF
+    chown system camera /dev/MAINAF
+
+    chmod 0660 /dev/MAINAF2
+    chown system camera /dev/MAINAF2
+
+    chmod 0660 /dev/SUBAF
+    chown system camera /dev/SUBAF
+
+    chmod 0660 /dev/GAF001AF
+    chown system camera /dev/GAF001AF
+
+    chmod 0660 /dev/DW9714AF
+    chown system camera /dev/DW9714AF
+
+    chmod 0660 /dev/LC898212AF
+    chown system camera /dev/LC898212AF
+
+    chmod 0660 /dev/BU64745GWZAF
+    chown system camera /dev/BU64745GWZAF
+#+PERIDOTW-692 PERIDOTW-717 PERIDOTW-718,chenming28,add, 20251016, disable UltraHDR
+    setprop ro.camera.disableHeicUltraHDR 1
+#-PERIDOTW-692 PERIDOTW-717 PERIDOTW-718,chenming28,add, 20251016, disable UltraHDR
+
+#SMB
+    chown system system /proc/smb/ScreenComm
+    chmod 0660 /proc/smb/ScreenComm
+
+    chmod 0660 /dev/spm
+    chown system system /dev/spm
+
+#+peridot-179,fangzhihua.wt,add, 20240307, add wakeup by TP double-click
+    chown system system /proc/gesture_control
+    chmod 0664 /proc/gesture_control
+    chown system system /proc/game_mode
+    chmod 0664 /proc/game_mode
+    chown system system /proc/panel_direction
+    chmod 0664 /proc/panel_direction
+    chown system system /proc/support_pen
+    chmod 0664 /proc/support_pen
+    chown system system /proc/edge_grid_zone
+    chmod 0664 /proc/edge_grid_zone
+#-peridot-179,fangzhihua.wt,add, 20240307, add wakeup by TP double-click
+
+# Add penlink patch
+    chown system system /proc/Pen_ID
+    chmod 0664 /proc/Pen_ID
+
+#+Bug714485,liushaoqing.wt,20240220,ADD,sensor bringup
+#For sar-sensor
+    #Allow access to sar sensors device attributes
+    chown system system /sys/class/capsense/power_enable
+    chmod 0660  /sys/class/capsense/power_enable
+
+    chown system system /sys/class/sensors/capsense_bottom_left/enable
+    chown system system /sys/class/sensors/capsense_bottom_left/poll_delay
+    chown system system /sys/class/sensors/capsense_bottom_left/enable_wakeup
+    chown system system /sys/bus/platform/drivers/tinno,tn_keyboard/tn_keyboard/hall_status
+    chmod 0660 /sys/class/sensors/capsense_bottom_left/enable
+    chmod 0660 /sys/class/sensors/capsense_bottom_left/poll_delay
+    chmod 0660 /sys/class/sensors/capsense_bottom_left/enable_wakeup
+    chmod 0660 /sys/bus/platform/drivers/tinno,tn_keyboard/tn_keyboard/hall_status
+    chown system system /sys/class/sensors/capsense_right/enable
+    chown system system /sys/class/sensors/capsense_right/poll_delay
+    chown system system /sys/class/sensors/capsense_right/enable_wakeup
+    chmod 0660 /sys/class/sensors/capsense_right/enable
+    chmod 0660 /sys/class/sensors/capsense_right/poll_delay
+    chmod 0660 /sys/class/sensors/capsense_right/enable_wakeup
+    chown system system /sys/class/sensors/capsense_top/enable
+    chown system system /sys/class/sensors/capsense_top/poll_delay
+    chown system system /sys/class/sensors/capsense_top/enable_wakeup
+    chmod 0660 /sys/class/sensors/capsense_top/enable
+    chmod 0660 /sys/class/sensors/capsense_top/poll_delay
+    chmod 0660 /sys/class/sensors/capsense_top/enable_wakeup
+    chown system system /dev/input/event1
+    chmod 0660 /dev/input/event1
+    chown system system /dev/input/event2
+    chmod 0660 /dev/input/event2
+    chown system system /dev/input/event3
+    chmod 0660 /dev/input/event3
+    chown system system /dev/input/event4
+    chmod 0660 /dev/input/event4
+    chown system system /dev/input/event5
+    chmod 0660 /dev/input/event5
+    chown system system /dev/input/event6
+    chmod 0660 /dev/input/event6
+    chown system system /dev/input/event7
+    chmod 0660 /dev/input/event7
+    chown system system /dev/input/event8
+    chmod 0660 /dev/input/event8
+    chown system system /dev/input/event9
+    chmod 0660 /dev/input/event9
+    chown system system /dev/input/event10
+    chmod 0660 /dev/input/event10
+    chown system system /dev/input/event11
+    chmod 0660 /dev/input/event11
+
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/min_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/min_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/name
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/name
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/poll_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/poll_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/power
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/power
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/resolution
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/resolution
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/self_test
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/sensor_power
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/sensor_power
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/subsystem
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/subsystem
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/type
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/type
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/uevent
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/uevent
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/vendor
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/vendor
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/version
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/version 
+
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/flags
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/flags
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/flush
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/flush
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/handle
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/handle
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/max_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/max_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/max_latency
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/max_latency
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/max_range
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/calibrate
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/calibrate
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/device
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/device
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/enable
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/enable
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/enable_wakeup
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9031as_abs_ch4/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch4/fifo_reserved_event_count 
+	
+	
+
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/min_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/min_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/name
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/name
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/poll_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/poll_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/power
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/power
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/resolution
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/resolution
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/self_test
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/sensor_power
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/sensor_power
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/subsystem
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/subsystem
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/type
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/type
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/uevent
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/uevent
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/vendor
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/vendor
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/version
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/version 
+
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/flags
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/flags
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/flush
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/flush
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/handle
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/handle
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/max_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/max_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/max_latency
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/max_latency
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/max_range
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/calibrate
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/calibrate
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/device
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/device
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/enable
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/enable
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/enable_wakeup
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9031as_abs_ch3/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch3/fifo_reserved_event_count 
+	
+
+	
+	chown system system /sys/class/sensors/hx9031as_abs_ch2/min_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/min_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/name
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/name
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/poll_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/poll_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/power
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/power
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/resolution
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/resolution
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/self_test
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/sensor_power
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/sensor_power
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/subsystem
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/subsystem
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/type
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/type
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/uevent
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/uevent
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/vendor
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/vendor
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/version
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/version 
+
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/flags
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/flags
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/flush
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/flush
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/handle
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/handle
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/max_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/max_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/max_latency
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/max_latency
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/max_range
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/calibrate
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/calibrate
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/device
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/device
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/enable
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/enable
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/enable_wakeup
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9031as_abs_ch2/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch2/fifo_reserved_event_count 
+	
+	
+
+	
+	chown system system /sys/class/sensors/hx9031as_abs_ch1/min_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/min_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/name
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/name
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/poll_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/poll_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/power
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/power
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/resolution
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/resolution
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/self_test
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/sensor_power
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/sensor_power
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/subsystem
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/subsystem
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/type
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/type
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/uevent
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/uevent
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/vendor
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/vendor
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/version
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/version 
+
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/flags
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/flags
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/flush
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/flush
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/handle
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/handle
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/max_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/max_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/max_latency
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/max_latency
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/max_range
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/calibrate
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/calibrate
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/device
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/device
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/enable
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/enable
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/enable_wakeup
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9031as_abs_ch1/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch1/fifo_reserved_event_count 
+	
+	
+
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/min_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/min_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/name
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/name
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/poll_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/poll_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/power
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/power
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/resolution
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/resolution
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/self_test
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/sensor_power
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/sensor_power
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/subsystem
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/subsystem
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/type
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/type
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/uevent
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/uevent
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/vendor
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/vendor
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/version
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/version 
+
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/flags
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/flags
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/flush
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/flush
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/handle
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/handle
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/max_delay
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/max_delay
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/max_latency
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/max_latency
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/max_range
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/calibrate
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/calibrate
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/device
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/device
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/enable
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/enable
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/enable_wakeup
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9031as_abs_ch0/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9031as_abs_ch0/fifo_reserved_event_count
+
+    chown system system /sys/class/sensors/hx9036_abs_ch7/min_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/min_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch7/name
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/name
+    chown system system /sys/class/sensors/hx9036_abs_ch7/poll_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/poll_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch7/power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/power
+    chown system system /sys/class/sensors/hx9036_abs_ch7/resolution
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/resolution
+    chown system system /sys/class/sensors/hx9036_abs_ch7/self_test
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch7/sensor_power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/sensor_power
+    chown system system /sys/class/sensors/hx9036_abs_ch7/subsystem
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/subsystem
+    chown system system /sys/class/sensors/hx9036_abs_ch7/type
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/type
+    chown system system /sys/class/sensors/hx9036_abs_ch7/uevent
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/uevent
+    chown system system /sys/class/sensors/hx9036_abs_ch7/vendor
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/vendor
+    chown system system /sys/class/sensors/hx9036_abs_ch7/version
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/version 
+
+    chown system system /sys/class/sensors/hx9036_abs_ch7/flags
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/flags
+    chown system system /sys/class/sensors/hx9036_abs_ch7/flush
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/flush
+    chown system system /sys/class/sensors/hx9036_abs_ch7/handle
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/handle
+    chown system system /sys/class/sensors/hx9036_abs_ch7/max_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/max_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch7/max_latency
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/max_latency
+    chown system system /sys/class/sensors/hx9036_abs_ch7/max_range
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch7/calibrate
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/calibrate
+    chown system system /sys/class/sensors/hx9036_abs_ch7/device
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/device
+    chown system system /sys/class/sensors/hx9036_abs_ch7/enable
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/enable
+    chown system system /sys/class/sensors/hx9036_abs_ch7/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/enable_wakeup
+    chown system system /sys/class/sensors/hx9036_abs_ch7/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9036_abs_ch7/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch7/fifo_reserved_event_count
+
+    chown system system /sys/class/sensors/hx9036_abs_ch6/min_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/min_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch6/name
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/name
+    chown system system /sys/class/sensors/hx9036_abs_ch6/poll_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/poll_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch6/power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/power
+    chown system system /sys/class/sensors/hx9036_abs_ch6/resolution
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/resolution
+    chown system system /sys/class/sensors/hx9036_abs_ch6/self_test
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch6/sensor_power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/sensor_power
+    chown system system /sys/class/sensors/hx9036_abs_ch6/subsystem
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/subsystem
+    chown system system /sys/class/sensors/hx9036_abs_ch6/type
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/type
+    chown system system /sys/class/sensors/hx9036_abs_ch6/uevent
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/uevent
+    chown system system /sys/class/sensors/hx9036_abs_ch6/vendor
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/vendor
+    chown system system /sys/class/sensors/hx9036_abs_ch6/version
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/version 
+
+    chown system system /sys/class/sensors/hx9036_abs_ch6/flags
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/flags
+    chown system system /sys/class/sensors/hx9036_abs_ch6/flush
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/flush
+    chown system system /sys/class/sensors/hx9036_abs_ch6/handle
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/handle
+    chown system system /sys/class/sensors/hx9036_abs_ch6/max_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/max_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch6/max_latency
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/max_latency
+    chown system system /sys/class/sensors/hx9036_abs_ch6/max_range
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch6/calibrate
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/calibrate
+    chown system system /sys/class/sensors/hx9036_abs_ch6/device
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/device
+    chown system system /sys/class/sensors/hx9036_abs_ch6/enable
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/enable
+    chown system system /sys/class/sensors/hx9036_abs_ch6/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/enable_wakeup
+    chown system system /sys/class/sensors/hx9036_abs_ch6/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9036_abs_ch6/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch6/fifo_reserved_event_count
+
+    chown system system /sys/class/sensors/hx9036_abs_ch5/min_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/min_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch5/name
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/name
+    chown system system /sys/class/sensors/hx9036_abs_ch5/poll_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/poll_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch5/power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/power
+    chown system system /sys/class/sensors/hx9036_abs_ch5/resolution
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/resolution
+    chown system system /sys/class/sensors/hx9036_abs_ch5/self_test
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch5/sensor_power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/sensor_power
+    chown system system /sys/class/sensors/hx9036_abs_ch5/subsystem
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/subsystem
+    chown system system /sys/class/sensors/hx9036_abs_ch5/type
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/type
+    chown system system /sys/class/sensors/hx9036_abs_ch5/uevent
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/uevent
+    chown system system /sys/class/sensors/hx9036_abs_ch5/vendor
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/vendor
+    chown system system /sys/class/sensors/hx9036_abs_ch5/version
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/version 
+
+    chown system system /sys/class/sensors/hx9036_abs_ch5/flags
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/flags
+    chown system system /sys/class/sensors/hx9036_abs_ch5/flush
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/flush
+    chown system system /sys/class/sensors/hx9036_abs_ch5/handle
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/handle
+    chown system system /sys/class/sensors/hx9036_abs_ch5/max_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/max_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch5/max_latency
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/max_latency
+    chown system system /sys/class/sensors/hx9036_abs_ch5/max_range
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch5/calibrate
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/calibrate
+    chown system system /sys/class/sensors/hx9036_abs_ch5/device
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/device
+    chown system system /sys/class/sensors/hx9036_abs_ch5/enable
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/enable
+    chown system system /sys/class/sensors/hx9036_abs_ch5/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/enable_wakeup
+    chown system system /sys/class/sensors/hx9036_abs_ch5/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9036_abs_ch5/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch5/fifo_reserved_event_count 
+
+    chown system system /sys/class/sensors/hx9036_abs_ch4/min_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/min_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch4/name
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/name
+    chown system system /sys/class/sensors/hx9036_abs_ch4/poll_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/poll_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch4/power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/power
+    chown system system /sys/class/sensors/hx9036_abs_ch4/resolution
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/resolution
+    chown system system /sys/class/sensors/hx9036_abs_ch4/self_test
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch4/sensor_power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/sensor_power
+    chown system system /sys/class/sensors/hx9036_abs_ch4/subsystem
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/subsystem
+    chown system system /sys/class/sensors/hx9036_abs_ch4/type
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/type
+    chown system system /sys/class/sensors/hx9036_abs_ch4/uevent
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/uevent
+    chown system system /sys/class/sensors/hx9036_abs_ch4/vendor
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/vendor
+    chown system system /sys/class/sensors/hx9036_abs_ch4/version
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/version 
+
+    chown system system /sys/class/sensors/hx9036_abs_ch4/flags
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/flags
+    chown system system /sys/class/sensors/hx9036_abs_ch4/flush
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/flush
+    chown system system /sys/class/sensors/hx9036_abs_ch4/handle
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/handle
+    chown system system /sys/class/sensors/hx9036_abs_ch4/max_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/max_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch4/max_latency
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/max_latency
+    chown system system /sys/class/sensors/hx9036_abs_ch4/max_range
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch4/calibrate
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/calibrate
+    chown system system /sys/class/sensors/hx9036_abs_ch4/device
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/device
+    chown system system /sys/class/sensors/hx9036_abs_ch4/enable
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/enable
+    chown system system /sys/class/sensors/hx9036_abs_ch4/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/enable_wakeup
+    chown system system /sys/class/sensors/hx9036_abs_ch4/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9036_abs_ch4/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch4/fifo_reserved_event_count 
+	
+	
+
+    chown system system /sys/class/sensors/hx9036_abs_ch3/min_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/min_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch3/name
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/name
+    chown system system /sys/class/sensors/hx9036_abs_ch3/poll_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/poll_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch3/power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/power
+    chown system system /sys/class/sensors/hx9036_abs_ch3/resolution
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/resolution
+    chown system system /sys/class/sensors/hx9036_abs_ch3/self_test
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch3/sensor_power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/sensor_power
+    chown system system /sys/class/sensors/hx9036_abs_ch3/subsystem
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/subsystem
+    chown system system /sys/class/sensors/hx9036_abs_ch3/type
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/type
+    chown system system /sys/class/sensors/hx9036_abs_ch3/uevent
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/uevent
+    chown system system /sys/class/sensors/hx9036_abs_ch3/vendor
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/vendor
+    chown system system /sys/class/sensors/hx9036_abs_ch3/version
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/version 
+
+    chown system system /sys/class/sensors/hx9036_abs_ch3/flags
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/flags
+    chown system system /sys/class/sensors/hx9036_abs_ch3/flush
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/flush
+    chown system system /sys/class/sensors/hx9036_abs_ch3/handle
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/handle
+    chown system system /sys/class/sensors/hx9036_abs_ch3/max_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/max_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch3/max_latency
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/max_latency
+    chown system system /sys/class/sensors/hx9036_abs_ch3/max_range
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch3/calibrate
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/calibrate
+    chown system system /sys/class/sensors/hx9036_abs_ch3/device
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/device
+    chown system system /sys/class/sensors/hx9036_abs_ch3/enable
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/enable
+    chown system system /sys/class/sensors/hx9036_abs_ch3/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/enable_wakeup
+    chown system system /sys/class/sensors/hx9036_abs_ch3/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9036_abs_ch3/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch3/fifo_reserved_event_count 
+	
+
+	
+    chown system system /sys/class/sensors/hx9036_abs_ch2/min_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/min_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch2/name
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/name
+    chown system system /sys/class/sensors/hx9036_abs_ch2/poll_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/poll_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch2/power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/power
+    chown system system /sys/class/sensors/hx9036_abs_ch2/resolution
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/resolution
+    chown system system /sys/class/sensors/hx9036_abs_ch2/self_test
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch2/sensor_power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/sensor_power
+    chown system system /sys/class/sensors/hx9036_abs_ch2/subsystem
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/subsystem
+    chown system system /sys/class/sensors/hx9036_abs_ch2/type
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/type
+    chown system system /sys/class/sensors/hx9036_abs_ch2/uevent
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/uevent
+    chown system system /sys/class/sensors/hx9036_abs_ch2/vendor
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/vendor
+    chown system system /sys/class/sensors/hx9036_abs_ch2/version
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/version 
+
+    chown system system /sys/class/sensors/hx9036_abs_ch2/flags
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/flags
+    chown system system /sys/class/sensors/hx9036_abs_ch2/flush
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/flush
+    chown system system /sys/class/sensors/hx9036_abs_ch2/handle
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/handle
+    chown system system /sys/class/sensors/hx9036_abs_ch2/max_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/max_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch2/max_latency
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/max_latency
+    chown system system /sys/class/sensors/hx9036_abs_ch2/max_range
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch2/calibrate
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/calibrate
+    chown system system /sys/class/sensors/hx9036_abs_ch2/device
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/device
+    chown system system /sys/class/sensors/hx9036_abs_ch2/enable
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/enable
+    chown system system /sys/class/sensors/hx9036_abs_ch2/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/enable_wakeup
+    chown system system /sys/class/sensors/hx9036_abs_ch2/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9036_abs_ch2/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch2/fifo_reserved_event_count 
+	
+	
+
+	
+    chown system system /sys/class/sensors/hx9036_abs_ch1/min_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/min_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch1/name
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/name
+    chown system system /sys/class/sensors/hx9036_abs_ch1/poll_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/poll_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch1/power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/power
+    chown system system /sys/class/sensors/hx9036_abs_ch1/resolution
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/resolution
+    chown system system /sys/class/sensors/hx9036_abs_ch1/self_test
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch1/sensor_power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/sensor_power
+    chown system system /sys/class/sensors/hx9036_abs_ch1/subsystem
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/subsystem
+    chown system system /sys/class/sensors/hx9036_abs_ch1/type
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/type
+    chown system system /sys/class/sensors/hx9036_abs_ch1/uevent
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/uevent
+    chown system system /sys/class/sensors/hx9036_abs_ch1/vendor
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/vendor
+    chown system system /sys/class/sensors/hx9036_abs_ch1/version
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/version 
+
+    chown system system /sys/class/sensors/hx9036_abs_ch1/flags
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/flags
+    chown system system /sys/class/sensors/hx9036_abs_ch1/flush
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/flush
+    chown system system /sys/class/sensors/hx9036_abs_ch1/handle
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/handle
+    chown system system /sys/class/sensors/hx9036_abs_ch1/max_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/max_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch1/max_latency
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/max_latency
+    chown system system /sys/class/sensors/hx9036_abs_ch1/max_range
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch1/calibrate
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/calibrate
+    chown system system /sys/class/sensors/hx9036_abs_ch1/device
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/device
+    chown system system /sys/class/sensors/hx9036_abs_ch1/enable
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/enable
+    chown system system /sys/class/sensors/hx9036_abs_ch1/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/enable_wakeup
+    chown system system /sys/class/sensors/hx9036_abs_ch1/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9036_abs_ch1/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch1/fifo_reserved_event_count 
+	
+	
+
+    chown system system /sys/class/sensors/hx9036_abs_ch0/min_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/min_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch0/name
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/name
+    chown system system /sys/class/sensors/hx9036_abs_ch0/poll_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/poll_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch0/power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/power
+    chown system system /sys/class/sensors/hx9036_abs_ch0/resolution
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/resolution
+    chown system system /sys/class/sensors/hx9036_abs_ch0/self_test
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/self_test
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch0/sensor_power
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/sensor_power
+    chown system system /sys/class/sensors/hx9036_abs_ch0/subsystem
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/subsystem
+    chown system system /sys/class/sensors/hx9036_abs_ch0/type
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/type
+    chown system system /sys/class/sensors/hx9036_abs_ch0/uevent
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/uevent
+    chown system system /sys/class/sensors/hx9036_abs_ch0/vendor
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/vendor
+    chown system system /sys/class/sensors/hx9036_abs_ch0/version
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/version 
+
+    chown system system /sys/class/sensors/hx9036_abs_ch0/flags
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/flags
+    chown system system /sys/class/sensors/hx9036_abs_ch0/flush
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/flush
+    chown system system /sys/class/sensors/hx9036_abs_ch0/handle
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/handle
+    chown system system /sys/class/sensors/hx9036_abs_ch0/max_delay
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/max_delay
+    chown system system /sys/class/sensors/hx9036_abs_ch0/max_latency
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/max_latency
+    chown system system /sys/class/sensors/hx9036_abs_ch0/max_range
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/max_range
+    
+    
+    chown system system /sys/class/sensors/hx9036_abs_ch0/calibrate
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/calibrate
+    chown system system /sys/class/sensors/hx9036_abs_ch0/device
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/device
+    chown system system /sys/class/sensors/hx9036_abs_ch0/enable
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/enable
+    chown system system /sys/class/sensors/hx9036_abs_ch0/enable_wakeup
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/enable_wakeup
+    chown system system /sys/class/sensors/hx9036_abs_ch0/fifo_max_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/fifo_max_event_count
+    chown system system /sys/class/sensors/hx9036_abs_ch0/fifo_reserved_event_count
+    chmod 0660 /sys/class/sensors/hx9036_abs_ch0/fifo_reserved_event_count
+
+    chown system system /sys/class/capsense/ch0_cap_diff_dump
+    chown system system /sys/class/capsense/ch1_cap_diff_dump
+    chown system system /sys/class/capsense/ch2_cap_diff_dump
+    chown system system /sys/class/capsense/ch4_cap_diff_dump
+    chown system system /sys/class/capsense/ch5_cap_diff_dump
+    
+    chmod 0660 /sys/class/capsense/ch0_cap_diff_dump
+    chmod 0660 /sys/class/capsense/ch1_cap_diff_dump
+    chmod 0660 /sys/class/capsense/ch2_cap_diff_dump
+    chmod 0660 /sys/class/capsense/ch4_cap_diff_dump
+    chmod 0660 /sys/class/capsense/ch5_cap_diff_dump
+#-Bug714485,liushaoqing.wt,20240220,ADD,sensor bringup
+
+on init
+    # Refer to http://source.android.com/devices/tech/storage/index.html
+    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through
+    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
+    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
+    #           Developers expect data stored in these locations to be available over long periods of time."
+    # Therefore, if the target doesn't support sd hot-plugging (Ex: the SD card slot in a battery compartment), we need to export SECONDARY_STORAGE in 'boot' section
+    #
+    # export SECONDARY_STORAGE /storage/sdcard1
+
+service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
+    class late_start
+    disabled
+
+# start mmstat
+on property:sys.boot_completed=1
+    mkdir /sys/kernel/tracing/instances/mmstat 711
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 0
+    write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
+    write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 1
+
+on property:sys.boot_completed=1
+    # System server manages zram writeback limits
+    chown root system /sys/block/zram0/writeback_limit
+    chmod 0664 /sys/block/zram0/writeback_limit
+    chown root system /sys/block/zram0/writeback_limit_enable
+    chmod 0664 /sys/block/zram0/writeback_limit_enable
+
+    # System server trigger extend reclaim
+    chown root system /sys/kernel/extend_reclaim/reclaim
+    chmod 0664 /sys/kernel/extend_reclaim/reclaim
+
+    trigger swapon_zram
+
+on swapon_zram
+    swapon_all /vendor/etc/fstab.enableswap
+
+

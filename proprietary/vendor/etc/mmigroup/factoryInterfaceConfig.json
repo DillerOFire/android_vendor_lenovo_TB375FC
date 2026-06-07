@@ -1,0 +1,435 @@
+{
+    "system": {
+        "acm_dev": "/dev/ttyGS0"
+    },
+    "storage": {
+        "emmcTestNode": "/sdcard/emmctest"
+    },
+    "hardwareinfo": {
+        "tp_lockdown_node": "/proc/touchscreen/lockdown_info",
+        "sec_dat_node": "/proc/secboot_fuse_reg",
+        "cpu_feature_id_node": "/proc/cpu_feature_id",
+        "main_board_temp": "sys/class/thermal/thermal_zone4/temp",
+        "checkdeviceinfo": {
+            "lcd": "support",
+            "sub_lcd": "nonSupport",
+            "tp": "support",
+            "sub_tp": "nonSupport",
+            "rom": "support",
+            "ram": "support",
+            "mainCam": "support",
+            "depCam": "support",
+            "macroCam": "support",
+            "wideCam": "support",
+            "irCam": "nonSupport",
+            "frontCam": "support",
+            "sub_frontCam": "nonSupport",
+            "smartpa": "support",
+            "short_distance": "support",
+            "nfc": "nonSupport",
+            "gravity": "support",
+            "proxity": "support",
+            "magnetic": "support",
+            "gyro": "support",
+            "hall": "nonSupport",
+            "pressure": "nonSupport",
+            "fingerPrint:": "support",
+            "sar": "nonSupport",
+            "batteryId": "support"
+        }
+    },
+    "efs_SS": {
+        "wifi_file": "wifi/.mac.info",
+        "bt_file": "bluetooth/bt_addr",
+        "prod_sn_file": "FactoryApp/serial_no",
+        "pba_sn_file": "FactoryApp/control_no",
+        "sku_file": "imei/prodcode.dat",
+        "mps_file": "imei/mps_code.dat",
+        "hw_file": "FactoryApp/hw_ver",
+        "copr_file": "FactoryApp/copr",
+        "cali_file": "FactoryApp/cal_date",
+        "omitData": "FactoryApp/OmitData"
+    },
+    "cameraCali": {
+        "flash_light_cali": "/mnt/vendor/persist/camera/flashlight_cal_result",
+        "camera_cali": "/mnt/vendor/persist/camera/dualcam_cal_result",
+        "camera_verify": "/mnt/vendor/persist/camera/verify_result"
+    },
+    "IRIS": {
+        "iris_camera_node": "/mnt/vendor/persist/camera/iris_camera",
+        "iris_infrared_led_node": "/mnt/vendor/persist/camera/infrared_led",
+        "iris_register_node": "/mnt/vendor/persist/camera/iris_register",
+        "iris_recognition_node": "/mnt/vendor/persist/camera/iris_recognition"
+    },
+    "systemInfo": {
+        "attastation_key": "LD_LIBRARY_PATH=/vendor/lib64/hw/ KmInstallKeybox /data/keybox.xml deviceId false",
+        "wechat_cmd": "SoterProvisioningTool",
+        "widewine_key": "StoreKeybox /data/keybox.bin",
+        "voucher_key": "ZC600KL-ASUS_X017D_2-Voucher00000002.bin.secure' /factory/Voucher_enc.bin"
+    },
+    "factorynv": {
+        "qcom": {
+            "mode_nv": [
+                {
+                    "base": 6855,
+                    "offset": 0,
+                    "mode": 1
+                },
+                {
+                    "base": 6855,
+                    "offset": 1,
+                    "mode": 3
+                },
+                {
+                    "base": 6855,
+                    "offset": 2,
+                    "mode": 9
+                },
+                {
+                    "base": 6855,
+                    "offset": 3,
+                    "mode": 17
+                },
+                {
+                    "base": 6855,
+                    "offset": 5,
+                    "mode": 5
+                },
+                {
+                    "base": 6855,
+                    "offset": 6,
+                    "mode": 4
+                },
+                {
+                    "base": 6855,
+                    "offset": 7,
+                    "mode": 2
+                },
+                {
+                    "base": 6855,
+                    "offset": 8,
+                    "mode": 6
+                },
+                {
+                    "base": 6855,
+                    "offset": 9,
+                    "mode": 11
+                },
+                {
+                    "base": 6855,
+                    "offset": 11,
+                    "mode": 10
+                },
+                {
+                    "base": 6855,
+                    "offset": 12,
+                    "mode": 18
+                },
+                {
+                    "base": 6855,
+                    "offset": 13,
+                    "mode": 19
+                },
+                {
+                    "base": 6855,
+                    "offset": 14,
+                    "mode": 0
+                },
+                {
+                    "base": 6855,
+                    "offset": 15,
+                    "mode": 20
+                },
+                {
+                    "base": 6855,
+                    "offset": 16,
+                    "mode": 7
+                },
+                {
+                    "base": 6855,
+                    "offset": 17,
+                    "mode": 8
+                },
+                {
+                    "base": 6855,
+                    "offset": 18,
+                    "mode": 21
+                },
+                {
+                    "base": 6855,
+                    "offset": 20,
+                    "mode": 23
+                }
+            ],
+            "flag_runin": {
+                "base": 6857,
+                "offset": 0,
+                "size": 4
+            },
+            "flag_imei": {
+                "base": 6860,
+                "offset": 8
+            },
+            "flag_mmi_current_bit": {
+                "base": 0,
+                "offset": -1
+            },
+            "flag_pcba_current_bit": {
+                "base": 0,
+                "offset": -1
+            },
+            "flag_optical_calibration": {
+                "base": 6854,
+                "offset": 64
+            },
+            "flag_proximity_calibration": {
+                "base": 6854,
+                "offset": 48,
+                "size": 16
+            },
+            "flag_Gyro_calibration": {
+                "base": 6854,
+                "offset": 20,
+                "size": 16
+            },
+            "flag_Acc_calibration": {
+                "base": 6854,
+                "offset": 0,
+                "size": 16
+            },
+            "flag_custornv": {
+                "base": 6856,
+                "offset": 0,
+                "size": 104
+            },
+            "country_code": {
+                "base": 6858,
+                "offset": 4,
+                "size": 32
+            },
+            "carrierId": {
+                "base": 6858,
+                "offset": 4,
+                "size": 32
+            },
+            "hardwareVer": {
+                "base": 6858,
+                "offset": 48,
+                "size": 10
+            },
+            "cali_date": {
+                "base": 571,
+                "offset": 0,
+                "size": 4
+            },
+            "ss_sim_flag": {
+                "base": 6858,
+                "offset": 36,
+                "size": 4
+            },
+            "coupling_state": {
+                "base": 6857,
+                "offset": 88,
+                "size": 4
+            },
+            "ss_nfc_testflag": {
+                "base": 6855,
+                "offset": 24,
+                "size": 1
+            },
+            "ss_plsensor_calibflag": {
+                "base": 6855,
+                "offset": 25,
+                "size": 1
+            },
+            "ss_plsensor_testflag": {
+                "base": 6855,
+                "offset": 26,
+                "size": 1
+            }
+        },
+        "mtk": {
+            "flag_runin": {
+                "base": 0,
+                "offset": 4,
+                "size": 4
+            },
+            "mode_nv": [
+                {
+                    "base": 0,
+                    "offset": 0,
+                    "mode": 1
+                },
+                {
+                    "base": 0,
+                    "offset": 1,
+                    "mode": 3
+                },
+                {
+                    "base": 0,
+                    "offset": 2,
+                    "mode": 17
+                },
+                {
+                    "base": 0,
+                    "offset": 3,
+                    "mode": 9
+                },
+                {
+                    "base": 0,
+                    "offset": 241,
+                    "mode": 5
+                },
+                {
+                    "base": 0,
+                    "offset": 860,
+                    "mode": 2
+                },
+                {
+                    "base": 0,
+                    "offset": 861,
+                    "mode": 6
+                },
+                {
+                    "base": 0,
+                    "offset": 862,
+                    "mode": 4
+                },
+                {
+                    "base": 0,
+                    "offset": 868,
+                    "mode": 11
+                },
+                {
+                    "base": 0,
+                    "offset": 904,
+                    "mode": 10
+                },
+                {
+                    "base": 0,
+                    "offset": 905,
+                    "mode": 18
+                },
+                {
+                    "base": 0,
+                    "offset": 906,
+                    "mode": 19
+                },
+                {
+                    "base": 0,
+                    "offset": 907,
+                    "mode": 0
+                },
+                {
+                    "base": 0,
+                    "offset": 908,
+                    "mode": 20
+                },
+                {
+                    "base": 0,
+                    "offset": 909,
+                    "mode": 7
+                },
+                {
+                    "base": 0,
+                    "offset": 910,
+                    "mode": 8
+                },
+                {
+                    "base": 0,
+                    "offset": 911,
+                    "mode": 21
+                },
+                {
+                    "base": 0,
+                    "offset": 912,
+                    "mode": 22
+                },
+                {
+                    "base": 0,
+                    "offset": 913,
+                    "mode": 23
+                },
+                {
+                    "base": 0,
+                    "offset": 914,
+                    "mode": 24
+                },
+                {
+                    "base": 0,
+                    "offset": 915,
+                    "mode": 25
+                },
+                {
+                    "base": 0,
+                    "offset": 917,
+                    "mode": 27
+                },
+                {
+                    "base": 0,
+                    "offset": 959,
+                    "mode": 959
+                }
+            ],
+            "flag_mmi_current_bit": {
+                "base": 0,
+                "offset": 855
+            },
+            "flag_pcba_current_bit": {
+                "base": 0,
+                "offset": 854
+            },
+            "flag_optical_calibration": {
+                "base": 0,
+                "offset": -1
+            },
+            "flag_proximity_calibration": {
+                "base": 0,
+                "offset": -1
+            },
+            "flag_Gyro_calibration": {
+                "base": 0,
+                "offset": -1
+            },
+            "flag_Acc_calibration": {
+                "base": 0,
+                "offset": -1
+            },
+            "flag_custornv": {
+                "base": 1,
+                "offset": 0,
+                "size": 104
+            },
+            "country_code": {
+                "base": 0,
+                "offset": -1,
+                "size": 32
+            },
+            "carrierId": {
+                "base": 0,
+                "offset": 204,
+                "size": 32
+            },
+            "hardwareVer": {
+                "base": 0,
+                "offset": 924,
+                "size": 10
+            },
+            "ss_nfc_testflag": {
+                "base": 0,
+                "offset": 951,
+                "size": 4
+            },
+            "ss_plsensor_calibflag": {
+                "base": 0,
+                "offset": 952,
+                "size": 4
+            },
+            "ss_plsensor_testflag": {
+                "base": 0,
+                "offset": 953,
+                "size": 4
+            }
+        }
+    }
+}

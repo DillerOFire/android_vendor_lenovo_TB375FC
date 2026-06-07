@@ -1,0 +1,152 @@
+{
+	"itemConfig": [{
+			"showName": "VersionInfo"
+		},
+		{
+			"showName": "MainSIMCard"
+		},
+		{
+			"showName": "SdCard"
+		},
+		{
+			"showName": "BatteryIdCheck"
+		},
+		{
+			"showName": "TYPEC"
+		},
+		{
+			"showName": "OTG2",
+			"support": false
+		},
+		{
+			"showName": "OTG3",
+			"support": false
+		},
+		{
+			"showName": "SMARTPA",
+			"support": false
+		},
+		{
+			"showName": "LeftTopSpeaker",
+			"support": false
+		},
+		{
+			"showName": "LeftBottomSpeaker",
+			"support": false
+		},
+		{
+			"showName": "RightTopSpeaker",
+			"support": false
+		},
+		{
+			"showName": "RightBottomSpeaker",
+			"support": false
+		},
+		{
+			"showName": "Speaker",
+			"support": false
+		},
+		{
+			"showName": "MainMicToHeadPhone",
+			"support": false
+		},
+		{
+			"showName": "SubMicToHeadPhone",
+			"support": false
+		},
+		{
+			"showName": "HsMicToHeadPhone",
+			"support": false
+		},
+		{
+			"showName": "HeadSetLeft"
+		},
+		{
+			"showName": "HeadSetRight"
+		},
+		{
+			"showName": "HeadSet"
+		},
+		{
+			"showName": "Backlight"
+		},
+		{
+			"showName": "TouchPanel"
+		},
+		{
+			"showName": "LCD"
+		},
+		{
+			"showName": "fingerprint"
+		},
+		{
+			"showName": "Sar"
+		},
+		{
+			"showName": "TopSar"
+		},
+		{
+			"showName": "BottomSar"
+		},
+		{
+			"showName": "KeyPad",
+			"support": false
+		},
+		{
+			"showName": "TpOpenShort",
+			"paramconfig": {
+				"support_max_refresh_rate": true
+			}
+		},
+		{
+			"showName": "MainCamera",
+			"support": false
+		},
+		{
+			"showName": "FrontCamera",
+			"support": false
+		},
+		{
+			"showName": "Flashlight",
+			"support": false
+		},
+		{
+			"showName": "Accelerometer",
+			"support": false
+		},
+		{
+			"showName": "Optical",
+			"support": false
+		},
+		{
+			"showName": "Gyroscope",
+			"support": false
+		},
+		{
+			"showName": "Hall",
+			"support": false
+		},
+		{
+			"showName": "PogoHall",
+			"support": false
+		},
+		{
+			"showName": "Wlan",
+			"support": false
+		},
+		{
+			"showName": "Bluetooth",
+			"support": false
+		},
+		{
+			"showName": "GPS",
+			"support": false
+		},
+		{
+			"showName": "KeyboardTest"
+		},
+		{
+			"showName": "TvOut"
+		}
+	]
+}

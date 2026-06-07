@@ -1,0 +1,70 @@
+{
+  "itemConfig": [
+    {
+      "showName": "VersionInfo"
+    },
+    {
+      "showName": "MainSIMCard"
+    },
+    {
+      "showName": "SdCard"
+    },
+    {
+      "showName": "KeyPad"
+    },
+    {
+      "showName": "Vibrator",
+      "paramconfig": {
+        "is_auto_vibrate": false
+      }
+    },
+    {
+      "showName": "Battery",
+      "paramconfig": {
+        "support_afc_charge": false
+      }
+    },
+    {
+      "showName": "OTG"
+    },
+    {
+      "showName": "Wlan"
+    },
+    {
+      "showName": "Bluetooth"
+    },
+    {
+      "showName": "GPS"
+    },
+    {
+      "showName": "SMARTPA"
+    },
+	{
+      "showName": "LeftTopSpeaker"
+    },
+	{
+      "showName": "LeftBottomSpeaker"
+    },
+	{
+      "showName": "RightTopSpeaker"
+    },
+	{
+      "showName": "RightBottomSpeaker"
+    },
+	{
+      "showName": "Speaker"
+    },
+	{
+      "showName": "MainMicToHeadPhone"
+    },
+	{
+      "showName": "HeadSet"
+    },
+	{
+      "showName": "HsMicToHeadPhone"
+    },
+	{
+      "showName": "FM"
+    }
+  ]
+}

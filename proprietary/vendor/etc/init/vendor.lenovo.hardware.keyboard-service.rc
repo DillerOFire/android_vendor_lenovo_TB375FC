@@ -1,0 +1,7 @@
+service keyboard_aidl_service /vendor/bin/hw/vendor.lenovo.hardware.keyboard-service
+    class hal
+    user system
+    group system
+
+on property:sys.boot_completed=1
+    start keyboard_aidl_service

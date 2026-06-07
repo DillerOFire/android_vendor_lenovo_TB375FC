@@ -1,0 +1,5 @@
+service vendor.fingerprint-default /vendor/bin/hw/android.hardware.biometrics.fingerprint-service
+    class hal
+    user system
+    group system
+    capabilities WAKE_ALARM

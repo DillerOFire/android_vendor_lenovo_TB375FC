@@ -1,0 +1,131 @@
+{
+	"itemConfig": [{
+			"showName": "VersionInfo"
+		},
+		{
+			"showName": "MainSIMCard"
+		},
+		{
+			"showName": "SdCard"
+		},
+		{
+			"showName": "KeyPad"
+		},
+		{
+			"showName": "Backlight"
+		},
+		{
+			"showName": "LCD"
+		},
+		{
+			"showName": "TouchPanel"
+		},
+		{
+			"showName": "TpOpenShort",
+			"paramconfig": {
+				"support_max_refresh_rate": true
+			}
+		},
+		{
+			"showName": "MainCamera"
+		},
+		{
+			"showName": "FrontCamera"
+		},
+		{
+			"showName": "Flashlight"
+		},
+		{
+			"showName": "Battery"
+		},
+		{
+			"showName": "TYPEC",
+			"support": false
+		},
+		{
+			"showName": "OTG2"
+		},
+		{
+			"showName": "OTG3"
+		},
+		{
+			"showName": "Wlan"
+		},
+		{
+			"showName": "Bluetooth"
+		},
+		{
+			"showName": "GPS"
+		},
+		{
+			"showName": "Accelerometer"
+		},
+		{
+			"showName": "Optical"
+		},
+		{
+			"showName": "Gyroscope"
+		},
+		{
+			"showName": "Hall"
+		},
+		{
+			"showName": "PogoHall"
+		},
+		{
+			"showName": "Sar"
+		},
+		{
+			"showName": "TopSar"
+		},
+		{
+			"showName": "BottomSar"
+		},
+		{
+			"showName": "SMARTPA",
+			"support": false
+		},
+		{
+			"showName": "LeftTopSpeaker"
+		},
+		{
+			"showName": "LeftBottomSpeaker"
+		},
+		{
+			"showName": "RightTopSpeaker"
+		},
+		{
+			"showName": "RightBottomSpeaker"
+		},
+		{
+			"showName": "Speaker"
+		},
+		{
+			"showName": "MainMicToHeadPhone"
+		},
+		{
+			"showName": "SubMicToHeadPhone"
+		},
+		{
+			"showName": "HsMicToHeadPhone"
+		},
+		{
+			"showName": "HeadSetLeft"
+		},
+		{
+			"showName": "HeadSetRight"
+		},
+		{
+			"showName": "HeadSet"
+		},
+		{
+			"showName": "fingerprint"
+		},
+		{
+			"showName": "KeyboardTest"
+		},
+		{
+			"showName": "TvOut"
+		}
+	]
+}

@@ -1,0 +1,203 @@
+{
+  "itemConfig": [
+    {
+      "showName": "VersionInfo"
+    },
+    {
+      "showName": "MainSIMCard"
+    },
+    {
+      "showName": "SdCard"
+    },
+    {
+      "showName": "KeyPad"
+    },
+    {
+      "showName": "Vibrator",
+      "paramconfig": {
+        "is_auto_vibrate": false
+      }
+    },
+    {
+      "showName": "Backlight"
+    },
+  {
+      "showName": "FM"
+    },
+    {
+      "showName": "Battery",
+      "support_background_test": true,
+      "paramconfig": {
+        "check_usb_is_unplug": false,
+        "support_typec_check": false,
+        "support_afc_charge": false,
+        "Voltage": {
+          "min": 0,
+          "max": 0
+        },
+        "temp": {
+          "min": -20,
+          "max": 550
+        },
+        "ChargerVoltage": {
+          "min": 0,
+          "max": 0
+        },
+        "ChargerCurrent": {
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    {
+      "showName": "Battery_20W",
+      "support": false,
+      "support_background_test": true,
+      "paramconfig": {
+        "check_usb_is_unplug": false,
+        "support_typec_check": false,
+        "support_afc_charge": false,
+        "check_PE": false,
+        "Voltage": {
+          "min": 0,
+          "max": 0
+        },
+        "temp": {
+          "min": -20,
+          "max": 550
+        },
+        "ChargerVoltage": {
+          "min": 0,
+          "max": 0
+        },
+        "ChargerCurrent": {
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    {
+      "showName": "Battery_30W",
+      "support": false,
+      "support_background_test": true,
+      "paramconfig": {
+        "check_usb_is_unplug": false,
+        "support_typec_check": false,
+        "support_afc_charge": false,
+        "check_PD": false,
+        "Voltage": {
+          "min": 0,
+          "max": 0
+        },
+        "temp": {
+          "min": -20,
+          "max": 550
+        },
+        "ChargerVoltage": {
+          "min": 0,
+          "max": 0
+        },
+        "ChargerCurrent": {
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    {
+      "showName": "TYPEC"
+    },
+    {
+      "showName": "LCD"
+    },
+    {
+      "showName": "Flashlight"
+    },
+    {
+      "showName": "TouchPanel"
+    },
+    {
+      "showName": "TpOpenShort"
+    },
+    {
+      "showName": "MainCamera",
+      "support": false
+    },
+    {
+      "showName": "FrontCamera",
+      "support": false
+    },
+    {
+      "showName": "Wlan"
+    },
+    {
+      "showName": "Bluetooth"
+    },
+    {
+      "showName": "GPS"
+    },
+    {
+      "showName": "Gyroscope",
+      "support": false,
+      "paramconfig": {
+        "support_calibrate": false
+      }
+    },
+    {
+      "showName": "Accelerometer",
+      "support": false,
+      "paramconfig": {
+        "support_calibrate": false
+      }
+    },
+    {
+      "showName": "Optical",
+      "support": false
+    },
+    {
+      "showName": "Proximity"
+    },
+    {
+      "showName": "Proximity_C"
+    },
+    {
+      "showName": "Hall",
+      "support": false
+    },
+	{
+      "showName": "LeftTopSpeaker",
+      "support": false
+    },
+	{
+      "showName": "LeftBottomSpeaker",
+      "support": false
+    },
+	{
+      "showName": "RightTopSpeaker",
+      "support": false
+    },
+	{
+      "showName": "RightBottomSpeaker",
+      "support": false
+    },
+	{
+      "showName": "Speaker",
+      "support": false
+    },
+	{
+      "showName": "MainMicToHeadPhone",
+      "support": false
+    },
+	{
+      "showName": "HsMicToHeadPhone",
+      "support": false
+    },
+  {
+      "showName": "HeadSet",
+      "support": false
+    },
+	{
+      "showName": "Sar",
+      "support": false
+    }
+  ]
+}

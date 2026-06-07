@@ -1,0 +1,30 @@
+{
+  "itemConfig": [
+    {
+      "showName": "Battery",
+      "paramconfig": {
+        "Voltage": {
+          "min": 2500,
+          "max": 4440
+        },
+        "ChargerCurrent": {
+          "min": -5000000,
+          "max": 3500000
+        },
+        "errorBatteryId": [
+        ]
+      }
+    },
+    {
+      "showName": "Battery_30W",
+      "support": false
+    },
+    {
+      "showName": "Battery_20W",
+      "support": false
+    },
+    {
+      "showName": "OTG"
+    }
+  ]
+}

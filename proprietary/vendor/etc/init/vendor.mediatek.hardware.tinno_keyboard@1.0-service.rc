@@ -1,0 +1,11 @@
+service tinnokeyboard /vendor/bin/hw/vendor.mediatek.hardware.tinno_keyboard@1.0-service 
+    interface vendor.mediatek.hardware.tinno_keyboard@1.0::ITinnoKeyBoard default
+    interface vendor.mediatek.hardware.tinno_keyboard@1.0::ITinnoKeyBoard default
+    class hal
+    user system
+   group system
+    oneshot
+
+on property:sys.boot_completed=1
+    start tinnokeyboard
+

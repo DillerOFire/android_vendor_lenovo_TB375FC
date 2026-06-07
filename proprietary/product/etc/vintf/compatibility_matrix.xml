@@ -1,0 +1,34 @@
+<!--
+    Input:
+        vendor/dolby/ds/service/hidl/dms/2.0/default/dax_framework_compatibility_matrix_hidl.xml
+        device/lenovo/zui_P98300DA1/dolby-config/dolby_vision_compatibility_matrix.xml
+-->
+<compatibility-matrix version="9.0" type="framework">
+    <hal format="hidl">
+        <name>android.hardware.media.c2</name>
+        <version>1.0</version>
+        <interface>
+            <name>IComponentStore</name>
+            <instance>default</instance>
+            <instance>dolby</instance>
+            <instance>vendor</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.dolby.dvs</name>
+        <version>1.0</version>
+        <version>1.1</version>
+        <interface>
+            <name>IDvs</name>
+            <instance>dvs-hal-service</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.dolby.hardware.dms</name>
+        <version>2.0</version>
+        <interface>
+            <name>IDms</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>

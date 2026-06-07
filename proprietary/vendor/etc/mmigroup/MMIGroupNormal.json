@@ -1,0 +1,162 @@
+{
+	"itemConfig": [{
+			"showName": "VersionInfo",
+			"paramconfig": {
+				"AddInfo": {
+					"SecureBoot": "any",
+					"//TPcolor": "any",
+					"CPUID": "any",
+					"TP": "any",
+					"RPMB": "any",
+					"CameraInfo": "any",
+					"BuildNumber": "any",
+					"//BaseBandVersion": "any",
+					"KernelVersion": "any",
+					"LCM": "any",
+					"verifiedbootstate": "green",
+					"System_Verity": "true"
+				}
+			}
+		},
+		{
+			"showName": "MainSIMCard"
+		},
+		{
+			"showName": "SdCard"
+		},
+		{
+			"showName": "KeyPad"
+		},
+		{
+			"showName": "TpOpenShort",
+			"paramconfig": {
+				"need_fixed_rate": false
+			}
+		},
+		{
+			"showName": "Backlight"
+		},
+		{
+			"showName": "LCD"
+		},
+		{
+			"showName": "TouchPanel"
+		},
+		{
+			"showName": "Battery"
+		},
+		{
+			"showName": "OTG2"
+		},
+		{
+			"showName": "OTG3"
+		},
+		{
+			"showName": "Wlan"
+		},
+		{
+			"showName": "Bluetooth"
+		},
+		{
+			"showName": "GPS"
+		},
+		{
+			"showName": "Accelerometer",
+			"paramconfig": {
+				"support_calibrate": false
+			}
+		},
+		{
+			"showName": "Optical"
+		},
+		{
+			"showName": "Gyroscope",
+			"paramconfig": {
+				"support_calibrate": false
+			}
+		},
+		{
+			"showName": "Hall"
+		},
+		{
+			"showName": "PogoHall"
+		},
+		{
+			"showName": "MainCamera",
+			"paramconfig": {
+				"takepicture_not_save_picture": true
+			}
+		},
+		{
+			"showName": "FrontCamera",
+			"paramconfig": {
+				"takepicture_not_save_picture": true
+			}
+		},
+		{
+			"showName": "Flashlight"
+		},
+		{
+			"showName": "Sar",
+			"support": false
+		},
+		{
+			"showName": "TopSar",
+			"support": false
+		},
+		{
+			"showName": "BottomSar",
+			"support": false
+		},
+		{
+			"showName": "SMARTPA",
+			"support": false
+		},
+		{
+			"showName": "LeftTopSpeaker"
+		},
+		{
+			"showName": "LeftBottomSpeaker"
+		},
+		{
+			"showName": "RightTopSpeaker"
+		},
+		{
+			"showName": "RightBottomSpeaker"
+		},
+		{
+			"showName": "Speaker",
+			"support": false
+		},
+		{
+			"showName": "MainMicToHeadPhone"
+		},
+		{
+			"showName": "SubMicToHeadPhone"
+		},
+		{
+			"showName": "HsMicToHeadPhone"
+		},
+		{
+			"showName": "HeadSetLeft",
+			"support": false
+		},
+		{
+			"showName": "HeadSetRight",
+			"support": false
+		},
+		{
+			"showName": "HeadSet"
+		},
+		{
+			"showName": "fingerprint"
+		},
+		{
+			"showName": "KeyboardTest"
+		},
+		{
+			"showName": "TvOut",
+			"support": false
+		}
+	]
+}

@@ -1,0 +1,190 @@
+{
+	"itemConfig": [{
+			"showName": "VersionInfo"
+		},
+		{
+			"showName": "SdCard"
+		},
+		{
+			"showName": "MainSIMCard",
+			"support_background_test": true
+		},
+		{
+			"showName": "KeyPad"
+		},
+		{
+			"showName": "fingerprint",
+			"paramconfig": {
+				"support_enrolTest": false,
+				"support_enrolTest_quality": false
+			}
+		},
+		{
+			"showName": "Backlight"
+		},
+		{
+			"showName": "LCD"
+		},
+		{
+			"showName": "TouchPanel"
+		},
+		{
+			"showName": "MainCamera"
+		},
+		{
+			"showName": "FrontCamera"
+		},
+		{
+			"showName": "Flashlight"
+		},
+		{
+			"showName": "Battery",
+			"paramconfig": {
+				"mCheckChargeTypeValue": "",
+				"Voltage": {
+					"min": 0,
+					"max": 0
+				},
+				"temp": {
+					"min": 0,
+					"max": 0
+				},
+				"ChargerCurrent": {
+					"min": 0,
+					"max": 0
+				},
+				"errorBatteryId": []
+			}
+		},
+		{
+			"showName": "OTG2",
+			"paramconfig": {
+				"support_typec": false
+			}
+		},
+		{
+			"showName": "OTG3",
+			"paramconfig": {
+				"support_typec": false
+			}
+		},
+		{
+			"showName": "Wlan"
+		},
+		{
+			"showName": "Bluetooth"
+		},
+		{
+			"showName": "GPS"
+		},
+		{
+			"showName": "Accelerometer",
+			"paramconfig": {
+				"support_calibrate": false,
+				"support_angle45": false,
+				"support_angleneg45": false
+			}
+		},
+		{
+			"showName": "Optical"
+		},
+		{
+			"showName": "Gyroscope",
+			"paramconfig": {
+				"support_calibrate": false
+			}
+		},
+		{
+			"showName": "Hall"
+		},
+		{
+			"showName": "Sar",
+			"paramconfig": {
+				"button_position": "",
+				"check_exist_only": "true"
+			}
+		},
+		{
+			"showName": "TopSar",
+			"paramconfig": {
+				"button_position": "",
+				"check_exist_only": "true"
+			}
+		},
+		{
+			"showName": "BottomSar",
+			"paramconfig": {
+				"button_position": "",
+				"check_exist_only": "true"
+			}
+		},
+		{
+			"showName": "LeftTopSpeaker",
+			"paramconfig": {
+				"music_name": [
+					"CurrentTone",
+					"MusicTone",
+					"cant_hear"
+				],
+				"music_rawResource_name": [
+					"currenttone",
+					"musictone"
+				]
+			}
+		},
+		{
+			"showName": "LeftBottomSpeaker",
+			"paramconfig": {
+				"music_name": [
+					"CurrentTone",
+					"MusicTone",
+					"cant_hear"
+				],
+				"music_rawResource_name": [
+					"currenttone",
+					"musictone"
+				]
+			}
+		},
+		{
+			"showName": "RightTopSpeaker",
+			"paramconfig": {
+				"music_name": [
+					"CurrentTone",
+					"MusicTone",
+					"cant_hear"
+				],
+				"music_rawResource_name": [
+					"currenttone",
+					"musictone"
+				]
+			}
+		},
+		{
+			"showName": "RightBottomSpeaker",
+			"paramconfig": {
+				"music_name": [
+					"CurrentTone",
+					"MusicTone",
+					"cant_hear"
+				],
+				"music_rawResource_name": [
+					"currenttone",
+					"musictone"
+				]
+			}
+		},
+		{
+			"showName": "MainMicToHeadPhone"
+		},
+		{
+			"showName": "SubMicToHeadPhone"
+		},
+		{
+			"showName": "HsMicToHeadPhone"
+		},
+		{
+			"showName": "HeadSet"
+		}
+	]
+}

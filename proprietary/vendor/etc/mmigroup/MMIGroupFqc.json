@@ -1,0 +1,33 @@
+{
+	"itemConfig": [{
+			"showName": "Accelerometer"
+		},
+		{
+			"showName": "RGBSensor"
+		},
+		{
+			"showName": "Optical"
+		},
+		{
+			"showName": "Optical_c"
+		},
+		{
+			"showName": "Gyroscope"
+		},
+		{
+			"showName": "Proximity"
+		},
+		{
+			"showName": "Proximity_C"
+		},
+		{
+			"showName": "SMARTPA"
+		},
+		{
+			"showName": "Sar"
+		},
+		{
+			"showName": "Hall"
+		}
+	]
+}

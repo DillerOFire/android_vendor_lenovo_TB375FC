@@ -1,0 +1,45 @@
+{
+  "itemConfig": [
+	{
+      "showName": "LeftTopSpeaker",
+      "paramconfig": {
+        "is_show_list": false,
+        "isPlayOnce": false,
+        "music_file": "/vendor/etc/mmigroup/100-6K_Sweep_0dB_44.1K_mono.wav"
+      }
+    },
+	{
+      "showName": "LeftBottomSpeaker",
+      "paramconfig": {
+        "is_show_list": false,
+        "isPlayOnce": false,
+        "music_file": "/vendor/etc/mmigroup/100-6K_Sweep_0dB_44.1K_mono.wav"
+      }
+    },
+	{
+      "showName": "RightTopSpeaker",
+      "paramconfig": {
+        "is_show_list": false,
+        "isPlayOnce": false,
+        "music_file": "/vendor/etc/mmigroup/100-6K_Sweep_0dB_44.1K_mono.wav"
+      }
+    },
+	{
+      "showName": "RightBottomSpeaker",
+      "paramconfig": {
+        "is_show_list": false,
+        "isPlayOnce": false,
+        "music_file": "/vendor/etc/mmigroup/100-6K_Sweep_0dB_44.1K_mono.wav"
+      }
+    },
+	{
+      "showName": "Speaker",
+      "paramconfig": {
+        "is_show_list": false,
+        "isPlayOnce": false,
+        "music_file": "/vendor/etc/mmigroup/100-6K_Sweep_0dB_44.1K_mono.wav",
+        "markedWords": "speaker_isMediaPlaying"
+      }
+    }
+  ]
+}
