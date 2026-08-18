@@ -40241,14 +40241,6 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-sh_binary {
-    name: "chipinfo",
-    owner: "lenovo",
-    src: "proprietary/vendor/bin/chipinfo",
-    filename: "chipinfo",
-    soc_specific: true,
-}
-
 cc_prebuilt_binary {
     name: "conninfra_loader",
     check_elf_files: false,
@@ -41196,6 +41188,39 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "android.hardware.vibrator-service.mediatek",
+    check_elf_files: false,
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.vibrator-service.mediatek",
+            ],
+            shared_libs: [
+                "libbase",
+                "libutils",
+                "liblog",
+                "libbinder_ndk",
+                "android.hardware.vibrator-V2-ndk",
+                "libhardware",
+                "libhardware_legacy",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "android.hardware.neuralnetworks-shim-service-mtk",
     check_elf_files: false,
     owner: "lenovo",
@@ -41249,39 +41274,6 @@ cc_prebuilt_binary {
                 "libneuralnetworks_sl_driver_mtk_prebuilt",
                 "libc++",
                 "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.thermal-service.mediatek",
-    check_elf_files: false,
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.thermal-service.mediatek",
-            ],
-            shared_libs: [
-                "libbase",
-                "libbinder_ndk",
-                "android.hardware.thermal-V1-ndk",
-                "libc",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libhardware",
-                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -41365,24 +41357,24 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.vibrator-service.mediatek",
+    name: "android.hardware.thermal-service.mediatek",
     check_elf_files: false,
     owner: "lenovo",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.vibrator-service.mediatek",
+                "proprietary/vendor/bin/hw/android.hardware.thermal-service.mediatek",
             ],
             shared_libs: [
                 "libbase",
-                "libutils",
-                "liblog",
                 "libbinder_ndk",
-                "android.hardware.vibrator-V2-ndk",
-                "libhardware",
-                "libhardware_legacy",
-                "libc++",
+                "android.hardware.thermal-V1-ndk",
                 "libc",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libhardware",
+                "libc++",
                 "libm",
                 "libdl",
             ],
