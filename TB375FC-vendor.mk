@@ -11,7 +11,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/odm/etc/vintf/manifest_qsqs.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_qsqs.xml \
     vendor/lenovo/TB375FC/proprietary/odm/etc/vintf/manifest_ss.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_ss.xml \
     vendor/lenovo/TB375FC/proprietary/odm/etc/vintf/manifest_tsts.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_tsts.xml \
-    vendor/lenovo/TB375FC/proprietary/product/etc/NOTICE.xml.gz:$(TARGET_COPY_OUT_PRODUCT)/etc/NOTICE.xml.gz \
     vendor/lenovo/TB375FC/proprietary/product/etc/init/init.motodestktop.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.motodestktop.rc \
     vendor/lenovo/TB375FC/proprietary/product/etc/permissions/product-permissions-mediatek.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product-permissions-mediatek.xml \
     vendor/lenovo/TB375FC/proprietary/product/etc/security/fsverity/play_store_fsi_cert.der:$(TARGET_COPY_OUT_PRODUCT)/etc/security/fsverity/play_store_fsi_cert.der \
@@ -42,15 +41,10 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/fsck.ntfs:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/fsck.ntfs \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/hw/android.hardware.audio.parameter_parser.service:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/hw/android.hardware.audio.parameter_parser.service \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/mount.ntfs:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/mount.ntfs \
-    vendor/lenovo/TB375FC/proprietary/system_ext/etc/NOTICE.xml.gz:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/NOTICE.xml.gz \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/OVSplitscreen/OVRelaunchBlacklist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/OVSplitscreen/OVRelaunchBlacklist.xml \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/OVSplitscreen/OVSplitBlacklist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/OVSplitscreen/OVSplitBlacklist.xml \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/a2dp_audio_policy_configuration.xml \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/a2dp_in_audio_policy_configuration.xml \
-    vendor/lenovo/TB375FC/proprietary/system_ext/etc/aconfig/flag.info:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/aconfig/flag.info \
-    vendor/lenovo/TB375FC/proprietary/system_ext/etc/aconfig/flag.map:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/aconfig/flag.map \
-    vendor/lenovo/TB375FC/proprietary/system_ext/etc/aconfig/flag.val:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/aconfig/flag.val \
-    vendor/lenovo/TB375FC/proprietary/system_ext/etc/aconfig/package.map:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/aconfig/package.map \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/aee-commit:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/aee-commit \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/aee-config:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/aee-config \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/audio_policy_configuration.xml \
@@ -267,7 +261,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/AudioLog_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/AudioLog_dynamic.xml \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/MBrain_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/MBrain_dynamic.xml \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/MNL_Config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/MNL_Config.xml \
-    vendor/lenovo/TB375FC/proprietary/vendor/etc/NOTICE.xml.gz:$(TARGET_COPY_OUT_VENDOR)/etc/NOTICE.xml.gz \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/apdb/APDB_MT6897___W2439:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6897___W2439 \
