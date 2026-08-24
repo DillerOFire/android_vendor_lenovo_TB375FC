@@ -2356,17 +2356,11 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/vendor/lib64/egl/libEGL_angle.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libEGL_angle.so \
     vendor/lenovo/TB375FC/proprietary/vendor/lib64/egl/libGLESv1_CM_angle.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv1_CM_angle.so \
     vendor/lenovo/TB375FC/proprietary/vendor/lib64/egl/libGLESv2_angle.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv2_angle.so \
-    vendor/lenovo/TB375FC/proprietary/vendor/lib/libRSCpuRef.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRSCpuRef.so \
-    vendor/lenovo/TB375FC/proprietary/vendor/lib/libRSDriver.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRSDriver.so \
-    vendor/lenovo/TB375FC/proprietary/vendor/lib/libRS_internal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRS_internal.so \
     vendor/lenovo/TB375FC/proprietary/vendor/lib/libbcinfo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbcinfo.so \
     vendor/lenovo/TB375FC/proprietary/vendor/lib/libblas.so:$(TARGET_COPY_OUT_VENDOR)/lib/libblas.so \
     vendor/lenovo/TB375FC/proprietary/vendor/lib/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcompiler_rt.so \
     vendor/lenovo/TB375FC/proprietary/vendor/lib/libprotobuf-cpp-full-4.25.8.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-full-4.25.8.so \
     vendor/lenovo/TB375FC/proprietary/vendor/lib/libprotobuf-cpp-lite-4.25.8.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-4.25.8.so \
-    vendor/lenovo/TB375FC/proprietary/vendor/lib64/libRSCpuRef.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSCpuRef.so \
-    vendor/lenovo/TB375FC/proprietary/vendor/lib64/libRSDriver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSDriver.so \
-    vendor/lenovo/TB375FC/proprietary/vendor/lib64/libRS_internal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRS_internal.so \
     vendor/lenovo/TB375FC/proprietary/vendor/lib64/libbcinfo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbcinfo.so \
     vendor/lenovo/TB375FC/proprietary/vendor/lib64/libblas.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libblas.so \
     vendor/lenovo/TB375FC/proprietary/vendor/lib64/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcompiler_rt.so \
