@@ -548,7 +548,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/vendor.mediatek.hardware.gpuserv-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.gpuserv-service \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/vendor.mediatek.hardware.mmagent-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.mmagent-service \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service \
-    vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/vendor.mediatek.hardware.mtkpower-service.mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.mtkpower-service.mediatek \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/vendor.mediatek.hardware.nvram-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.nvram-service \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.pq_aidl-service \
@@ -902,7 +901,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmagent-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmagent-service.rc \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc \
-    vendor/lenovo/TB375FC/proprietary/vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/vendor.mediatek.hardware.nvram-sevice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.nvram-sevice.rc \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/vendor.mediatek.hardware.tinno_keyboard@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.tinno_keyboard@1.0-service.rc \
@@ -1103,7 +1101,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/vintf/manifest/mtk_lbs_service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/mtk_lbs_service.xml \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/vintf/manifest/mtkgnss-batching.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/mtkgnss-batching.xml \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/vintf/manifest/mtkpower_applist-mtk-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/mtkpower_applist-mtk-default.xml \
-    vendor/lenovo/TB375FC/proprietary/vendor/etc/vintf/manifest/power-mediatek.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/power-mediatek.xml \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/vintf/manifest/thermal-mediatek.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/thermal-mediatek.xml \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/vendor.dolby.hardware.dms.xml \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml \
