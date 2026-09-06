@@ -238,7 +238,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/hostapd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/hostapd \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/mt6897/android.hardware.graphics.allocator-V2-service-mediatek.mt6897:$(TARGET_COPY_OUT_VENDOR)/bin/hw/mt6897/android.hardware.graphics.allocator-V2-service-mediatek.mt6897 \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/mt6897/camerahalserver:$(TARGET_COPY_OUT_VENDOR)/bin/hw/mt6897/camerahalserver \
-    vendor/lenovo/TB375FC/proprietary/vendor/bin/hw/wpa_supplicant:$(TARGET_COPY_OUT_VENDOR)/bin/hw/wpa_supplicant \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/logwrapper:$(TARGET_COPY_OUT_VENDOR)/bin/logwrapper \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/rkp_factory_extraction_tool64:$(TARGET_COPY_OUT_VENDOR)/bin/rkp_factory_extraction_tool64 \
     vendor/lenovo/TB375FC/proprietary/vendor/bin/sh:$(TARGET_COPY_OUT_VENDOR)/bin/sh \
@@ -446,7 +445,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/android.hardware.usb-aidl-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb-aidl-service.mediatek.rc \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/android.hardware.usb.gadget-aidl-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb.gadget-aidl-service.mediatek.rc \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/android.hardware.wifi-service-lazy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi-service-lazy.rc \
-    vendor/lenovo/TB375FC/proprietary/vendor/etc/init/android.hardware.wifi.supplicant-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi.supplicant-service.rc \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/arm.mali.platform-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/arm.mali.platform-mediatek.rc \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/atcid.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/atcid.rc \
     vendor/lenovo/TB375FC/proprietary/vendor/etc/init/audiocmdservice_atci.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/audiocmdservice_atci.rc \
