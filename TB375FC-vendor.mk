@@ -6,6 +6,8 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/lenovo/TB375FC
 
 PRODUCT_COPY_FILES += \
+    vendor/lenovo/TB375FC/proprietary/vendor/lib/mt6897/libmnl.so:$(TARGET_COPY_OUT_VENDOR)/lib/mt6897/libmnl.so \
+    vendor/lenovo/TB375FC/proprietary/vendor/lib64/mt6897/libmnl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mt6897/libmnl.so \
     vendor/lenovo/TB375FC/proprietary/odm/etc/vintf/manifest.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest.xml \
     vendor/lenovo/TB375FC/proprietary/odm/etc/vintf/manifest_dsds.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_dsds.xml \
     vendor/lenovo/TB375FC/proprietary/odm/etc/vintf/manifest_qsqs.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_qsqs.xml \
@@ -1443,7 +1445,6 @@ PRODUCT_PACKAGES += \
     libimgsys_wpe \
     libmml \
     libmmlpqImpl \
-    libmnl \
     libmtk_drvb \
     libmtkcam.atmseventmgr \
     libmtkcam.debugwrapper \
