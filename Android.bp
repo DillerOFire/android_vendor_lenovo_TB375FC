@@ -6242,58 +6242,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 cc_prebuilt_library_shared {
-    name: "libclearkeycasplugin",
-    check_elf_files: false,
-    owner: "lenovo",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/mediacas/libclearkeycasplugin.so",
-            ],
-            shared_libs: [],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/mediacas/libclearkeycasplugin.so",
-            ],
-            shared_libs: [],
-        },
-    },
-    compile_multilib: "both",
-    relative_install_path: "mediacas",
-    prefer: true,
-    soc_specific: true,
-}
-cc_prebuilt_library_shared {
-    name: "libdrmclearkeyplugin",
-    check_elf_files: false,
-    owner: "lenovo",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/mediadrm/libdrmclearkeyplugin.so",
-            ],
-            shared_libs: [],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/mediadrm/libdrmclearkeyplugin.so",
-            ],
-            shared_libs: [],
-        },
-    },
-    compile_multilib: "both",
-    relative_install_path: "mediadrm",
-    prefer: true,
-    soc_specific: true,
-}
-cc_prebuilt_library_shared {
     name: "libmockdrmcryptoplugin",
     check_elf_files: false,
     owner: "lenovo",
@@ -19125,26 +19073,6 @@ cc_prebuilt_library_shared {
     system_ext_specific: true,
 }
 cc_prebuilt_library_shared {
-    name: "android.hidl.memory@1.0-impl",
-    check_elf_files: false,
-    owner: "lenovo",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/hw/android.hidl.memory@1.0-impl.so",
-            ],
-            shared_libs: [],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    system_ext_specific: true,
-}
-cc_prebuilt_library_shared {
     name: "libJpegOal",
     check_elf_files: false,
     owner: "lenovo",
@@ -22696,22 +22624,6 @@ prebuilt_apex {
 }
 
 prebuilt_apex {
-    name: "com.android.vndk.v31",
-    owner: "lenovo",
-    src: "proprietary/system_ext/apex/com.android.vndk.v31.apex",
-    filename: "com.android.vndk.v31.apex",
-    system_ext_specific: true,
-}
-
-prebuilt_apex {
-    name: "com.android.vndk.v33",
-    owner: "lenovo",
-    src: "proprietary/system_ext/apex/com.android.vndk.v33.apex",
-    filename: "com.android.vndk.v33.apex",
-    system_ext_specific: true,
-}
-
-prebuilt_apex {
     name: "com.android.vndk.v34",
     owner: "lenovo",
     src: "proprietary/system_ext/apex/com.android.vndk.v34.apex",
@@ -24870,25 +24782,6 @@ cc_prebuilt_binary {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/bin/vndservice",
-            ],
-            shared_libs: [],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-cc_prebuilt_binary {
-    name: "vndservicemanager",
-    check_elf_files: false,
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/vndservicemanager",
             ],
             shared_libs: [],
         },
