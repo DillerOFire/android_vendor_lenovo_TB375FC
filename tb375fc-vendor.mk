@@ -60,7 +60,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/fsck.ntfs:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/fsck.ntfs \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/hw/android.hardware.audio.parameter_parser.service:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/hw/android.hardware.audio.parameter_parser.service \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/hw/android.hidl.allocator@1.0-service:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/hw/android.hidl.allocator@1.0-service \
-    vendor/lenovo/TB375FC/proprietary/system_ext/bin/hwservicemanager:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/hwservicemanager \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/kpoc_charger:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/kpoc_charger \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/loghidlsysservice:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/loghidlsysservice \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/magt:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/magt \
@@ -106,7 +105,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/hw/init.aee.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/hw/init.aee.rc \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/hw/meta_init.system.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/hw/meta_init.system.rc \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/hw/vendor_init_as_system.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/hw/vendor_init_as_system.rc \
-    vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/hwservicemanager.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/hwservicemanager.rc \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/init.thermald.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.thermald.rc \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/kpoc_charger.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/kpoc_charger.rc \

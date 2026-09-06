@@ -25245,25 +25245,6 @@ cc_prebuilt_binary {
     system_ext_specific: true,
 }
 cc_prebuilt_binary {
-    name: "hwservicemanager",
-    check_elf_files: false,
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/hwservicemanager",
-            ],
-            shared_libs: [],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-cc_prebuilt_binary {
     name: "kpoc_charger",
     check_elf_files: false,
     owner: "lenovo",
