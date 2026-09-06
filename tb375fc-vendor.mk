@@ -59,7 +59,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/boot_logo_updater:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/boot_logo_updater \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/fsck.ntfs:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/fsck.ntfs \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/hw/android.hardware.audio.parameter_parser.service:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/hw/android.hardware.audio.parameter_parser.service \
-    vendor/lenovo/TB375FC/proprietary/system_ext/bin/hw/android.hidl.allocator@1.0-service:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/hw/android.hidl.allocator@1.0-service \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/kpoc_charger:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/kpoc_charger \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/loghidlsysservice:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/loghidlsysservice \
     vendor/lenovo/TB375FC/proprietary/system_ext/bin/magt:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/magt \
@@ -99,7 +98,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/aee_aed64.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/aee_aed64.rc \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/aee_aed64_v2.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/aee_aed64_v2.rc \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/android.hardware.audio.parameter_parser.service.rc \
-    vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/android.hidl.allocator@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/android.hidl.allocator@1.0-service.rc \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/batterywarning.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/batterywarning.rc \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/bootlogoupdater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/bootlogoupdater.rc \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/init/hw/init.aee.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/hw/init.aee.rc \
@@ -134,7 +132,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/sysconfig/com.mediatek.ims.config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.mediatek.ims.config.xml \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/usb_audio_policy_configuration.xml \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/vintf/manifest.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/vintf/manifest.xml \
-    vendor/lenovo/TB375FC/proprietary/system_ext/etc/vintf/manifest/android.hidl.allocator@1.0-service.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/vintf/manifest/android.hidl.allocator@1.0-service.xml \
     vendor/lenovo/TB375FC/proprietary/system_ext/etc/vintf/manifest/mtk-mbrainj-default.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/vintf/manifest/mtk-mbrainj-default.xml \
     vendor/lenovo/TB375FC/proprietary/system_ext/framework/CustomPropInterface.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/CustomPropInterface.jar \
     vendor/lenovo/TB375FC/proprietary/system_ext/framework/CustomPropInterface.jar.fsv_meta:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/CustomPropInterface.jar.fsv_meta \
